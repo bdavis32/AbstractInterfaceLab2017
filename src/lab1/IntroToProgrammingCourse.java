@@ -19,9 +19,6 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
         this.setCourseNumber(courseNumber);
     }
 
-    public String getCourseNumber() {
-        return courseNumber;
-    }
 
     public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
