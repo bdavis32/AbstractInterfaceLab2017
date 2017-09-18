@@ -5,13 +5,15 @@ import javax.swing.JOptionPane;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Benjamin Davis
  * @version     1.00
  */
-public class AdvancedJavaCourse {
-    String courseName;
-    private String courseNumber;
-    private double credits;
+public class AdvancedJavaCourse extends ProgrammingCourse {
+//  These are properties from the superclass ProgrammingCourse
+//    private String courseName;
+//    private String courseNumber;
+//    private double credits;
+//  End of common properties
     private String prerequisites;
 
     public AdvancedJavaCourse(String courseName, String courseNumber) {
@@ -25,13 +27,16 @@ public class AdvancedJavaCourse {
 
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
+           /* JOptionPane.showMessageDialog(null,
                     "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
+            System.exit(0);*/
+           throw new IllegalArgumentException("Prerequisites cannot be null or empty string");
         }
         this.prerequisites = prerequisites;
     }
 
+    
+    @Override
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
@@ -41,20 +46,4 @@ public class AdvancedJavaCourse {
         this.setCredits(credits);
     }
 
-    public String getCourseName() {
-        return courseName;
-    }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
-    
 }
