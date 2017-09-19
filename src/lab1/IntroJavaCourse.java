@@ -18,6 +18,9 @@ public class IntroJavaCourse extends ProgrammingCourse {
     }
 
     public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0 || prerequisites.isEmpty()){
+            throw new IllegalArgumentException("Prerequisites cannot be null or empty.");
+        }
         this.prerequisites = prerequisites;
     }
 
