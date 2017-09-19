@@ -5,7 +5,7 @@ Objectives for Lab #2:
      choosing an appropriate interface name (should be a noun).
    * Practice identifying common behaviors (methods) and placing
      those things in the super class
-   * Properties must go in the sub-classes because Intefaces don't allow properties.
+   * Properties must go in the sub-classes because Interfaces don't allow properties.
    * In the files provided many mistakes have been made with regard to proper
      encapsulation (declaring properties private, etc.) and placement of
      common members. You may have to move some things around, remove things
