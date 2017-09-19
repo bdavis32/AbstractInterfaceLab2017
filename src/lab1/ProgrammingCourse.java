@@ -5,11 +5,14 @@ package lab1;
  * @author Benjamin
  */
 public abstract class ProgrammingCourse {
-
     private String courseName;
     private String courseNumber;
     private double credits;
 
+    public ProgrammingCourse(String courseName, String courseNumber){
+        setCourseName(courseName);
+        setCourseNumber(courseNumber);
+    }
     public String getCourseName() {
         return courseName;
     }

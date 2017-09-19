@@ -4,12 +4,11 @@ package lab1;
  * Describe responsibilities here. NOTE: this class has NO PREREQUISITES!
  * Do not change this fact.
  *
- * @author      your name goes here
+ * @author      Benjamin Davis
  * @version     1.00
  */
 public class IntroToProgrammingCourse extends ProgrammingCourse {
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+        super(courseName, courseNumber);
     }
 }
