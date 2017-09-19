@@ -9,33 +9,27 @@ package lab2;
  *
  * @author Benjamin
  */
-public abstract class ProgrammingCourse {
+public abstract class ProgrammingCourse implements Course{
     private String courseName;
     private String courseNumber;
     private double credits;
 
+    @Override
     public String getCourseName() {
         return courseName;
     }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
+    @Override
     public String getCourseNumber() {
         return courseNumber;
     }
-
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
-
+    @Override
     public double getCredits() {
         return credits;
     }
-
-    public void setCredits(double credits) {
-        this.credits = credits;
-    }
-    
+    @Override
+    public abstract void setCourseNumber(String courseNumber);
+    @Override
+    public abstract void setCourseName(String courseName);
+    @Override
+    public abstract void setCredits(double credits);    
 }

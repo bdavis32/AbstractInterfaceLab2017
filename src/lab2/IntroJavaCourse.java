@@ -6,36 +6,37 @@ package lab2;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroJavaCourse {
-    String courseName;
-    private String courseNumber;
-    private double credits;
+public class IntroJavaCourse extends ProgrammingCourse{
+
     private String prerequisites;
 
     public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
     }
 
-    public String getCourseNumber() {
-        return courseNumber;
+    @Override
+    public void setCourseName(String courseName){
+        if(courseName == null || courseName.isEmpty() || courseName.length() == 0){
+            throw new IllegalArgumentException("CourseName cannot be null or empty.");
+        }
+        this.setCourseName(courseName);
     }
-
+    
+    @Override
     public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
+        this.setCourseNumber(courseNumber);
     }
 
-    public double getCredits() {
-        return credits;
-    }
-
+    @Override
     public void setCredits(double credits) {
-        this.credits = credits;
+        this.setCredits(credits);
     }
 
     public String getPrerequisites() {
         return prerequisites;
     }
+
 
     public void setPrerequisites(String prerequisites) {
         this.prerequisites = prerequisites;
